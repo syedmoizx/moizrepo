@@ -3,15 +3,15 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      python: 3.8
+      python: 3.8  # Optional; include if needed
     commands:
-      - echo Installing NGINX...
+      - echo Updating apt and installing NGINX...
       - apt-get update
       - apt-get install -y nginx
 
   build:
     commands:
-      - echo Copying index.html to /var/www/html
+      - echo Copying index.html to /var/www/html/
       - cp index.html /var/www/html/index.html
 
 artifacts:
