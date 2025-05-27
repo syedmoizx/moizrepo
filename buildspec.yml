@@ -4,8 +4,7 @@ phases:
   install:
     commands:
       - yum update -y
-      - amazon-linux-extras enable nginx1
-      - yum install -y nginx
+      - yum install nginx -y
 
   build:
     commands:
