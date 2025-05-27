@@ -2,12 +2,15 @@ version: 0.2
 
 phases:
   install:
-    commands:
+    commands1:
+      - echo Ensuring /var/www/html exists...
       - yum update -y
       - yum install nginx -y
 
   build:
-    commands:
+    commands2:
+      - echo HELLO SYED MOIZ
+      - mkdir -p /var/www/html
       - cp index.html /var/www/html/
 
 artifacts:
