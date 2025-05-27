@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - yum update -y
+      - amazon-linux-extras enable nginx1
+      - yum install -y nginx
+
+  build:
+    commands:
+      - cp index.html /var/www/html/
+
+artifacts:
+  files:
+    - index.html
