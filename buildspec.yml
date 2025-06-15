@@ -6,11 +6,6 @@ phases:
       - apt-get update -y
       - apt-get install -y nginx
 
-phases:
-  build:
-    commands:
-      - echo "Build phase (no actions needed)"
-
 artifacts:
   files:
     - '**/*'
