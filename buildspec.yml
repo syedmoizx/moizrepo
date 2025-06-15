@@ -3,15 +3,13 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "Updating Ubuntu packages"
-      - sudo apt-get update
-      - echo "Installing Nginx"
-      - sudo apt-get install nginx -y
+      - apt-get update -y
+      - apt-get install -y nginx
 
+phases:
   build:
     commands:
-      - echo "Copying index.html to /var/www/html/"
-      - sudo cp index.html /var/www/html/index.html
+      - echo "Build phase (no actions needed)"
 
 artifacts:
   files:
