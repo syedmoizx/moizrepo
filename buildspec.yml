@@ -3,8 +3,13 @@ version: 0.2
 phases:
   install:
     commands:
-      - apt-get update -y
-      - apt-get install -y nginx
+      - yum update -y
+      - yum install -y nginx
+
+phases:
+  build:
+    commands:
+      - echo "Nginx installed"
 
 artifacts:
   files:
