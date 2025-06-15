@@ -6,10 +6,10 @@ phases:
       - yum update -y
       - yum install -y nginx
 
-phases:
   build:
     commands:
-      - echo "Nginx installed"
+      - echo "Copying index.html to /var/www/html"
+      - cp index.html /var/www/html/index.html
 
 artifacts:
   files:
